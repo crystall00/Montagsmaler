@@ -2,9 +2,7 @@
   "name": "Montagsmaler",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "socket.io": "^2.3.0"
+    "express": "latest",
+    "socket.io": "latest"
   }
 }
