@@ -27,7 +27,7 @@ function onConnect(socket) {
     let user = new User(socket);
     socket.join(room1.name);
     /*  room1.addUser(user);*/
-    console.log('a user connected');
+    console.log('A user connected to server');
     let message = "Welcome " + user.id + " joining the party. Total connection: " + room1.users.length;
     room1.sendAll(io,message,socket,'game');
     console.log(message);

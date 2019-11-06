@@ -28,17 +28,12 @@ Room.prototype.removeUser = function (user) {
         }
     }
 };
-/*
-Room.prototype.sendAll = function (message) {
-    for (var i = 0, len = this.users.length; i < len; i++) {
-        this.users[i].socket.send(message);
-    }
-};
-*/
 
 Room.prototype.sendAll = function(io,message,socket,room){
   //  io.in(room.name).emit('big-announcement', 'the game will start soon');
-    io.to(room.name).emit(message);
+  //  io.to(room.name).emit('big-announcement',message);
+    //io.to(room.name).emit('chat message', message);
+    io.sockets.emit('chat message', "this is a test");
 };
 
 module.exports.User = User;
